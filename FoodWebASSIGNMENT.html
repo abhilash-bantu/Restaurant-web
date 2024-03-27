@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: g;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+
+section .main .men_text h1{
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 20px;
+}
+
+section .main .men_text h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+
+section .main .main_image img{
+    width: 700px;
+    position: relative;
+    left: 70px;
+}
+
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 123px;
+    bottom: 120px;
+    line-height: 22px;
+}
+
+section .main_btn{
+    background: #fac031;
+    position: relative;
+    left: 123px;
+    bottom: 30px;
+    width: 150px;
+    cursor: pointer;
+    padding: 12px 25px;
+}
+
+section .main_btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+section .main_btn i{
+    color: #fff;
+    transition: 0.3s;
+}
+
+section .main_btn:hover i{
+    transform: translateX(7px);
+}
+
+
+
+/*About*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .image img{
+    width: 800px;
+    position: relative;
+    top: 60px;
+}
+
+.about .about_main .about_text h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.about .about_main .about_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+}
+
+.about .about_main .about_text h3{
+    font-size: 30px;
+    margin: 0 0 50px 0;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+
+.about .about_btn{
+    background: #fac031;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left: 55%;
+    bottom: 30px;
+}
+
+
+
+/*Menu*/
+
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu .menu_box .menu_card{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu .menu_box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover{
+    color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.menu .menu_box .menu_card .menu_info h3{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon{
+    color: #fac031;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+
+/*Review*/
+
+.review{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.review h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.review h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    position: relative;
+    bottom: 15px;
+    display: block;
+}
+
+.review .review_box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+}
+
+.review .review_box .review_card{
+    width: 350px;
+    height: 535px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+
+.review .review_box .review_card .review_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_profile{
+    transform: translateY(-60px);
+}
+
+.review .review_box .review_card .review_profile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #cccccc;
+}
+
+.review .review_box .review_card .review_text{
+    text-align: center;
+}
+
+.review .review_box .review_card .review_text .name{
+    color: #000;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .name{
+    transform: translateY(-50px);
+}
+
+.review .review_box .review_card .review_text .review_icon{
+    color: #fac031;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_icon{
+    transform: translateY(-30px);
+}
+
+.review .review_box .review_card .review_text .review_social i{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_social i{
+    opacity: 1;
+    transform: translateY(-8px);
+}
+
+.review .review_box .review_card .review_text p{
+    text-align: center;
+    line-height: 22px;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text p{
+    margin-top: 5px;
+}
+
+
+
+/*Order*/
+
+.order{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background-image: url(image/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 55px;
+}
+
+.order h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.order h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.order .order_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.order .order_main .order_image img{
+    width: 600px;
+}
+
+.order .order_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+
+.order .order_main form .input p{
+    line-height: 25px;
+}
+
+.order .order_main form .input{
+    margin: 5px;
+}
+
+.order .order_main form .input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.order .order_main form .input input:focus{
+    border: 2px solid #fac031;
+}
+
+.order .order_main form .order_btn{
+    padding: 10px 0;
+    background: #fac031;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/*Footer*/
+
+
+    footer {
+        width: 100%;
+            padding: 30px 20px;
+            background: #eeeeee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+    
+}
+        
+
+        /* Contact details - left */
+        .footer_tag {
+            text-align: left;
+        }
+
+        /* Service details - centered */
+        .footer_tag-service {
+            text-align: center;
+        }
+
+        /* Follow details - right */
+        .footer_tag-follow {
+            text-align: right;
+        }
+
+        /* Common style for contact, service, and follow details */
+        .footer_tag h2,
+        .footer_tag-service h2,
+        .footer_tag-follow h2 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .footer_tag p,
+        .footer_tag-service p,
+        .footer_tag-follow p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .footer_tag i,
+        .footer_tag-service i,
+        .footer_tag-follow i {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .footer_tag i:hover,
+        .footer_tag-service i:hover,
+        .footer_tag-follow i:hover {
+            color: #fac031;
+        }
+
+        /* Social media icons - right aligned */
+        
+        .social-icons i {
+            font-size: 24px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .social-icons i:hover {
+            color: #fac031;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU" crossorigin="anonymous">
+</head>
+<body>
+
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <img src="C:\Users\R.K COMPUTERS\Pictures/logo.png">
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Order">Order</a></li>
+            </ul>
+
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </nav>
+
+        <div class="main">
+
+            <div class="men_text">
+                <h1>Get Fresh<span>Food</span><br>in a Easy Way</h1>
+            </div>
+
+            <div class="main_image">
+                <img src="C:\Users\R.K COMPUTERS\Pictures/main_img.png">
+            </div>
+
+        </div>
+
+        <p>
+           Welcome to our Restaurant."Experience mouth-watering flavors and convenient ordering with our online restaurant! From succulent burgers to crispy salads,We pride ourselves in following the traditional Hot Chicken seasonings and processes used in Nashville, the birthplace of Hot Chicken. From dry spice to the classic hot oil, our Hot Chicken is as Nashvillian as it gets! we offer a variety of delicious dishes to satisfy your cravings. Simply click 'Order Now' below, explore our menu, and enjoy contact-free delivery or takeout. Indulge in the comfort of your home while supporting local food and quality service."
+        </p>
+
+        <div class="main_btn">
+            <a href="#">Order Now</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+
+
+    <!--About-->
+
+    <div class="about" id="About">
+        <div class="about_main">
+
+            <div class="image">
+                <img src="C:\Users\R.K COMPUTERS\Pictures/Food-Plate.png">
+            </div>
+
+            <div class="about_text">
+                <h1><span>About</span>Us</h1>
+                <h3>Why Choose us?</h3>
+                <p>
+                    When you choose our restaurant, you're not just choosing a meal - you're choosing an experience. We pride ourselves on our exceptional customer service, ensuring that every guest feels valued and appreciated. Our knowledgeable and friendly staff are dedicated to making your dining experience memorable, from the moment you walk in the door to the last bite of your meal. We also offer a variety of specials and events, so there's always something new to try. Thank you for choosing us, and we can't wait to serve you!
+                </p>
+            </div>
+
+        </div>
+
+        <a href="#" class="about_btn">Order Now</a>
+
+    </div>
+
+
+
+    <!--Menu-->
+
+    <div class="menu" id="Menu">
+        <h1>Our <span>Menu</span></h1>
+
+        <div class="menu_box">
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/burger&pizza.jpg">
+                </div>
+
+                <div class="menu_info">
+                    <h2>Pizzas & Burgers</h2>
+                   
+                    <p>
+                       Experience the delicious<br>
+                        and variety of "Pizzas & Burgers" 
+                    </p>
+                   
+                    <div class="menu_icon">
+                        
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+            
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/veg starter.avif">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Veg Starters</h2>
+                    <br>
+                    <p>
+                        Explore the whole delicious<br>
+                        "Veggie starters" view it and order 
+                    </p>
+                    
+                    <div class="menu_icon">
+                      
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/mixed-non-veg-platter.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Non-Veg Starters</h2>
+                    <p>
+                        Try our variety range of<br>
+                        delicious "Non-Veg starters" now
+                    </p>
+                   
+                    <div class="menu_icon">
+                      
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/soups.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Soups</h2>
+                    <br>
+                    <p>
+                       View our hot and spicy flavoured<br>
+                       wide varieties of "Soups"
+                    </p>
+                   
+                    <div class="menu_icon">
+                       
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/food-seafood.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Fish & Sea Foods</h2>
+                    <p>
+                       Order now our very famous<br>
+                       "Fish & Sea Food" items with lot of delight
+                    </p>
+                   
+                    <div class="menu_icon">
+                       
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/main course.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Main Course</h2>
+                    <br>
+                    <p>
+                        Get the delicious craving<br>
+                        "Main Course" items
+                    </p>
+                    
+                    <div class="menu_icon">
+                        
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/salads.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Salads</h2>
+                    <br>
+                    <p>
+                        Get the Fresh "salads"<br>
+                        for your own health & diet
+                    </p>
+                    
+                    <div class="menu_icon">
+                        
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/Noodles.jpeg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Noodles</h2>
+                    <br>
+                    <p>
+                       Order now our chinnese and <br>
+                       japaneese wide range "Noodles"
+                    </p>
+                  
+                    <div class="menu_icon">
+                       
+                    </div>
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/sandwitch.jpeg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>SandWitch</h2>
+                    <br>
+                    <p>
+                        Get the nice and light food<br>
+                        sandwitch
+                    </p>
+                   
+                    
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/chocolate.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>chocolate</h2>
+                    <br>
+                    <p>
+                       Have variety range of<br>delicious "chocolate" items 
+                    </p>
+                    
+                    
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures\ice_cream.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Ice-Cream</h2>
+                    <br>
+                    <p>
+                       Have the cool and creamy<br>
+                       flavours of "Ice-Creams"
+                    </p>
+                  
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures\juices.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Drinks</h2>
+                    <br>
+                    <p>
+                       Drink the delicious fruits juices <br>
+                       for your own health
+                    </p>
+                   
+                    <a href="#" class="menu_btn">View & Order Now</a>
+                </div>
+
+            </div> 
+            
+        </div>
+
+    </div>
+
+   
+    <!--Review-->
+
+    <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+
+        <div class="review_box">
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/customerprofile.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Issac Jessimiel</h2>
+                    <br><br>
+                    <p>
+                        We really loved to visit this restaurant because the food here is really fabulus and delicious. We had great time here,so far we loved it we likely to visit again and the best part there is the service and starters which we had ordered all of the main courses and ice-cream with juices with a top notch best quality.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/customerprofile.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">AbhiRam Varma</h2>
+                 <br><br>
+                    <p>
+                        The service was quick and responsive. As soon as we ordered our food, we were served within 5-10 minutes, the steward was nice and often came to check on our table if we needed anything. Full points to the service staff as they were agile, polite, and responsive.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/customerprofile.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">sai Krishna Reddy</h2>
+                <br><br>
+                    <p>
+                        Overall, the food is amazing and is an absolute experience for your taste buds. The downsides are the location, difficult parking, and lack of gender equality. Other than that, I wouldn’t fault anything in this absolute gem called ‘Aslam Special Butter Gravy Chicken.’
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="C:\Users\R.K COMPUTERS\Pictures/customerprofile.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Ramesh Rao</h2>
+                    <br><br>
+                    <p>
+                        “Great pizza and brunch as well. We had a big party for my birthday brunch and our waitress ramesh was so nice and awesome even with our big loud table of 11 people. I had the garden Benedict which was great, as well as the pancakes. Other favs included the special Santa Fe scramble and the breakfast sandwiches. Def recommend their cheese pizza too, really good sauce and crust.”
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Order-->
+     <br><br><br><br><br><br><br>
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img src="C:\Users\R.K COMPUTERS\Pictures/waiter.jpg">
+            </div>
+
+            <form action="#">
+
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" placeholder="Your Name">
+                </div>
+
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" placeholder="Your Email">
+                </div>
+
+                <div class="input">
+                    <p>Number</p>
+                    <input placeholder="Your Number">
+                </div>
+
+                <div class="input">
+                    <p>How Much</p>
+                    <input type="number" placeholder="How Many Items">
+                </div>
+
+                <div class="input">
+                    <p>You Order</p>
+                    <input placeholder="Food Name">
+                </div>
+
+                <div class="input">
+                    <p>Address</p>
+                    <input placeholder="Your Address">
+                </div>
+
+                <a href="#" class="order_btn">Order Now</a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!--Footer-->
+   
+    <footer>
+
+        <footer>
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+91 9298102910</p>
+                <p>foodshop123@gmail.com</p>
+            </div>
+
+            <div class="footer_tag footer_tag-service">
+                <h2>Service</h2>
+                <p>24/7 Customer Support</p>
+                <p>Fast Delivery</p>
+            </div>
+    
+            <div class="footer_tag footer_tag-follow">
+                <h2>Follow</h2>
+                <p>Follow us on social media:</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+
+            
+        </footer>    
+    
+</body>
+</html>
